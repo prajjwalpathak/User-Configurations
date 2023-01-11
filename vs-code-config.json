@@ -64,7 +64,7 @@
             "icon": "terminal-cmd"
         },
         "Git Bash": {
-            "source": "Git Bash"
+            "source": "Bash"
         },
     },
     "workbench.iconTheme": "material-icon-theme",
