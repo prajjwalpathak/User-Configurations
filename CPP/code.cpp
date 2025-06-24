@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define uint unsigned int
+#define co cout <<
+#define ci cin >>
 #define nl cout << "\n"
 #define sz(v) (int)(v.size())
 #define fr(i, a, b) for (int i = (a); i < (b); i++)
