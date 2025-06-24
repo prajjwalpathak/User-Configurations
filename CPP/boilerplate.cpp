@@ -16,11 +16,11 @@ using namespace std;
 void solve()
 {
     int n;
-    cin >> n;
+    ci n;
     vector<int> v(n);
-    fr(i, 0, sz(v))
+    fr(i, 0, n)
     {
-        cin >> v[i];
+        ci v[i];
     }
 }
 
@@ -30,7 +30,7 @@ int32_t main()
     cin.tie(NULL);
 
     int t = 1;
-    cin >> t;
+    ci t;
     while (t--)
     {
         solve();
