@@ -1,11 +1,8 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define nl cout << "\n"
-#define for(i, a, b) for (int i = (a); i < (b); i++)
-#define sortasc(v) sort(v.begin(), v.end())                        // sort ascending: O(N log N)
-#define sortdsc(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)
-#define mxe(v) *max_element(v.begin(), v.end())                    // find max element in vector: O(N)
-#define mne(v) *min_element(v.begin(), v.end())                    // find min element in vector: O(N)
+#define sortAsc(v) sort(v.begin(), v.end())                        // sort ascending: O(N log N)
+#define sortDsc(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)
 
 using namespace std;
 
@@ -14,7 +11,7 @@ void solve()
     int n;
     cin >> n;
     vector<int> v(n);
-    for(i, 0, n)
+    for (int i = 0; i < n; i++)
     {
         cin >> v[i];
     }
