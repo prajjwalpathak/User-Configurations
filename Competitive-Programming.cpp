@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define nl cout << "\n"
-#define sortAsc(v) sort(v.begin(), v.end())                        // sort ascending: O(N log N)
-#define sortDsc(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)
+#define sorta(v) sort(v.begin(), v.end())                          // sort ascending: O(N log N)
+#define sortd(v, type) sort(v.begin(), v.end(), greater<type>())   // sort descending: O(N log N)
+#define maxe(v) *max_element(v.begin(), v.end())                    // find max element in vector: O(N)
+#define mine(v) *min_element(v.begin(), v.end())                    // find min element in vector: O(N)
 
 using namespace std;
 
