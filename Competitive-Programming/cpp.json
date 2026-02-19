@@ -85,5 +85,19 @@
             "}"
         ],
         "description": "Count no. of digits in an integer"
+    },
+    "if-else print": {
+        "prefix": "ifelseprint",
+        "body": [
+            "if (flag)",
+            "{",
+            "    cout << \"YES\\n\";",
+            "}",
+            "else",
+            "{",
+            "    cout << \"NO\\n\";",
+            "}"
+        ],
+        "description": "Print result based on a condition"
     }
 }
