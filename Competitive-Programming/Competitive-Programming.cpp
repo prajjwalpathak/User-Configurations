@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 #define ll long long
-#define sorta(v) sort(v.begin(), v.end())                           // sort ascending: O(N log N)
-#define sortd(v, type) sort(v.begin(), v.end(), greater<type>())    // sort descending: O(N log N)
-#define maxe(v) *max_element(v.begin(), v.end())                    // find max element in vector: O(N)
-#define mine(v) *min_element(v.begin(), v.end())                    // find min element in vector: O(N)
+#define sorta(v) sort(v.begin(), v.end())                        // sort ascending: O(N log N)
+#define sortd(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)
+#define maxe(v) *max_element(v.begin(), v.end())                 // find max element in vector: O(N)
+#define mine(v) *min_element(v.begin(), v.end())                 // find min element in vector: O(N)
 
 using namespace std;
 
@@ -15,6 +15,14 @@ void solve()
     for (int i = 0; i < n; i++)
     {
         cin >> v[i];
+    }
+    if (flag)
+    {
+        cout << "YES";
+    }
+    else
+    {
+        cout << "NO";
     }
 }
 
@@ -28,6 +36,28 @@ int32_t main()
     while (t--)
     {
         solve();
+        cout << "\n";
     }
     return 0;
+}
+
+bool isPrime(long long n)
+{
+    if (n <= 1)
+        return false;
+    if (n <= 3)
+        return true;
+    if (n % 2 == 0 || n % 3 == 0)
+        return false;
+    for (long long i = 5; i * i <= n; i = i + 6)
+    {
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+    }
+    return true;
+}
+
+int countDigits(long long n) {
+    if (n == 0) return 1;
+    return (int)log10l(llabs(n)) + 1;
 }
