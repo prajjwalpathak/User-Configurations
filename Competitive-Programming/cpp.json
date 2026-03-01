@@ -1,5 +1,5 @@
 {
-    "Competitive Programming": {
+    "CP": {
         "prefix": "cp",
         "body": [
             "#include <bits/stdc++.h>",
@@ -8,21 +8,23 @@
             "#define sortd(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)",
             "#define maxe(v) *max_element(v.begin(), v.end())                 // find max element in vector: O(N)",
             "#define mine(v) *min_element(v.begin(), v.end())                 // find min element in vector: O(N)",
+            "#define nl \"\\n\"",
             "",
             "using namespace std;",
             "",
             "void solve()",
             "{",
-            "    int n;$0",
-            "    cin >> n;",
+            "    int n;",
+            "    cin >> n;$0",
             "    vector<int> v(n);",
+            "    unordered_map<int, int> mp;",
             "    for (int i = 0; i < n; i++)",
             "    {",
             "        cin >> v[i];",
             "    }",
             "}",
             "",
-            "int32_t main()",
+            "int main()",
             "{",
             "    ios_base::sync_with_stdio(false);",
             "    cin.tie(NULL);",
@@ -32,12 +34,12 @@
             "    while (t--)",
             "    {",
             "        solve();",
-            "        cout << \"\\n\";",
+            "        cout << nl;",
             "    }",
             "    return 0;",
             "}"
         ],
-        "description": "Competitive Programming"
+        "description": "CP"
     },
     "GCD": {
         "prefix": "gcd",
@@ -87,8 +89,8 @@
         ],
         "description": "Count no. of digits in an integer"
     },
-    "iep": {
-        "prefix": "iep",
+    "Print If Else": {
+        "prefix": "pie",
         "body": [
             "if (flag)",
             "{",
@@ -100,5 +102,25 @@
             "}"
         ],
         "description": "Print result based on a condition"
+    },
+    "Print Vector": {
+        "prefix": "pv",
+        "body": [
+            "for (const int &it : v)",
+            "{",
+            "    cout << it << \" \";",
+            "}"
+        ],
+        "description": "Print Vector"
+    },
+    "Print HashMap": {
+        "prefix": "pm",
+        "body": [
+            "for (const auto &it : mp)",
+            "{",
+            "    cout << it.first << \" \" << it.second << nl;",
+            "}"
+        ],
+        "description": "Print HashMap"
     }
 }
