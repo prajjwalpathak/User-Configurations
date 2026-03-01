@@ -13,9 +13,29 @@ void solve()
     int n;
     cin >> n;
     vector<int> v(n);
+    unordered_map<int, int> mp;
     for (int i = 0; i < n; i++)
     {
         cin >> v[i];
+    }
+
+    for (const int &it : v)
+    {
+        cout << it << " ";
+    }
+    
+    for (const auto &it : mp)
+    {
+        cout << it.first << " " << it.second << nl;
+    }
+
+    if (true)
+    {
+        cout << "YES";
+    }
+    else
+    {
+        cout << "NO";
     }
 }
 
