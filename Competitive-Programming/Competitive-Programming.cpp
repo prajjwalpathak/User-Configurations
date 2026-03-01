@@ -4,6 +4,7 @@
 #define sortd(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)
 #define maxe(v) *max_element(v.begin(), v.end())                 // find max element in vector: O(N)
 #define mine(v) *min_element(v.begin(), v.end())                 // find min element in vector: O(N)
+#define nl "\n"
 
 using namespace std;
 
@@ -16,17 +17,9 @@ void solve()
     {
         cin >> v[i];
     }
-    if (flag)
-    {
-        cout << "YES";
-    }
-    else
-    {
-        cout << "NO";
-    }
 }
 
-int32_t main()
+int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -36,9 +29,21 @@ int32_t main()
     while (t--)
     {
         solve();
-        cout << "\n";
+        cout << nl;
     }
     return 0;
+}
+
+int gcd(int a, int b)
+{
+    while (b)
+    {
+        a %= b;
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+    return a;
 }
 
 bool isPrime(long long n)
@@ -57,7 +62,9 @@ bool isPrime(long long n)
     return true;
 }
 
-int countDigits(long long n) {
-    if (n == 0) return 1;
+int countDigits(long long n)
+{
+    if (n == 0)
+        return 1;
     return (int)log10l(llabs(n)) + 1;
 }
