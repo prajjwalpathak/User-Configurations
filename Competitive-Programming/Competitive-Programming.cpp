@@ -59,9 +59,7 @@ int gcd(int a, int b)
     while (b)
     {
         a %= b;
-        int temp = a;
-        a = b;
-        b = temp;
+        swap(a, b);
     }
     return a;
 }
