@@ -23,7 +23,7 @@ void solve()
     {
         cout << it << " ";
     }
-    
+
     for (const auto &it : mp)
     {
         cout << it.first << " " << it.second << nl;
@@ -88,9 +88,6 @@ int countDigits(long long n)
 }
 
 // Sieve of Eratosthenes (SOE)
-// Smallest Prime Factor (SOE)
-// Factors of a Number (Factorization) (SOE)
-
 vector<bool> is_prime;
 
 void sieveOfEratosthenes(int n)
@@ -108,5 +105,44 @@ void sieveOfEratosthenes(int n)
                 is_prime[j] = false;
             }
         }
+    }
+}
+
+// Smallest Prime Factor (SOE)
+const int MAXINT = 100000001;
+vector<int> spf(MAXINT);
+
+void sieveOfEratosthenesSPF()
+{
+    for (int i = 0; i < MAXINT; i++)
+    {
+        spf[i] = i;
+    }
+
+    for (int i = 2; i * i < MAXINT; i++)
+    {
+        if (spf[i] == i)
+        {
+            for (int j = i * i; j < MAXINT; j += i)
+            {
+                if (spf[j] == j)
+                {
+                    spf[j] = i;
+                }
+            }
+        }
+    }
+}
+
+// Factors of a Number (Factorization) (SOE)
+vector<int> factors;
+
+void getFactorization(int n)
+{
+    factors.clear();
+    while (n != 1)
+    {
+        factors.emplace_back(spf[n]);
+        n /= spf[n];
     }
 }
