@@ -109,7 +109,7 @@ void sieveOfEratosthenes(int n)
 }
 
 // Smallest Prime Factor (SOE)
-const int MAXINT = 100000001;
+const int MAXINT = 10000001;
 vector<int> spf(MAXINT);
 
 void sieveOfEratosthenesSPF()
