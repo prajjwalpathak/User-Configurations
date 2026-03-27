@@ -1,10 +1,24 @@
 #include <bits/stdc++.h>
-#define ll long long
-#define sorta(v) sort(v.begin(), v.end())                        // sort ascending: O(N log N)
-#define sortd(v, type) sort(v.begin(), v.end(), greater<type>()) // sort descending: O(N log N)
-#define maxe(v) *max_element(v.begin(), v.end())                 // find max element in vector: O(N)
-#define mine(v) *min_element(v.begin(), v.end())                 // find min element in vector: O(N)
 #define nl "\n"
+#define ll long long
+#define vi vector<int>
+#define vll vector<ll>
+#define vc vector<char>
+#define si set<int>
+#define mii map<int, int>
+#define usi unordered_set<int>
+#define umii unordered_map<int, int>
+#define umci unordered_map<char, int>
+#define max_heap priority_queue<int>
+#define min_heap priority_queue<int, vector<int>, greater<int>>
+#define FOR(i, a, b) for (int i = a; i <= b; i++)
+#define sorta(v) sort(v.begin(), v.end())
+#define sortd(v) sort(v.begin(), v.end(), greater<int>())
+#define bs(v, x) binary_search(v.begin(), v.end(), x) // true/false
+#define max_itr(v) max_element(v.begin(), v.end())    // itr
+#define min_itr(v) min_element(v.begin(), v.end())    // itr
+#define lb(v, x) lower_bound(v.begin(), v.end(), x)   // itr
+#define ub(v, x) upper_bound(v.begin(), v.end(), x)   // itr
 
 using namespace std;
 
@@ -52,16 +66,6 @@ int main()
         cout << nl;
     }
     return 0;
-}
-
-int gcd(int a, int b)
-{
-    while (b)
-    {
-        a %= b;
-        swap(a, b);
-    }
-    return a;
 }
 
 bool isPrime(long long n)
