@@ -11,7 +11,6 @@
 #define umci unordered_map<char, int>
 #define max_heap priority_queue<int>
 #define min_heap priority_queue<int, vector<int>, greater<int>>
-#define FOR(i, a, b) for (int i = a; i <= b; i++)
 #define sorta(v) sort(v.begin(), v.end())
 #define sortd(v) sort(v.begin(), v.end(), greater<int>())
 #define bs(v, x) binary_search(v.begin(), v.end(), x) // true/false
@@ -19,6 +18,11 @@
 #define min_itr(v) min_element(v.begin(), v.end())    // itr
 #define lb(v, x) lower_bound(v.begin(), v.end(), x)   // itr
 #define ub(v, x) upper_bound(v.begin(), v.end(), x)   // itr
+/* clang-format off */
+#define debug(x) cout << #x << " = " << x << nl;
+#define vdebug(a) cout << #a << " = "; for(auto x: a) cout << x << " "; cout << nl;
+#define mdebug(a) cout << #a << " = " << nl; for(auto x: a) cout << x.first << " -> " << x.second << " " << nl; cout << nl;
+/* clang-format on */
 
 using namespace std;
 
